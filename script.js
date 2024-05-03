@@ -9,3 +9,5 @@ while (numeriDaIndovinare.length < 5) {
 
   document.querySelector("header").innerHTML = `<div>${numeriDaIndovinare}</div>`;
 
+//   Sabato si continua
+
