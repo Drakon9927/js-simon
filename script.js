@@ -16,9 +16,20 @@ let seconds = 5
 let messaggio = "Numeri scomparsi, riscrivili!"
 
 setTimeout(function() {
+
   document.querySelector("header").classList.add("displaynone");
+}, seconds * 1000);
 
-},seconds * 1000);
 
-console.log(setTimeout)
+  // Chiede all'utente i 5 numeri
+  
+  let numeriUtente = [];
+
+  setTimeout(function() {
+    for (let i = 0; i < 5; i++) {
+      let elemento = prompt("Inserisci i numeri in ordine");
+      numeriUtente.push(parseInt(elemento));
+    }}, seconds * 1500);
+
+    console.log(numeriUtente);
 
