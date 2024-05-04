@@ -1,13 +1,24 @@
-numeriDaIndovinare = [];
+numeriDaMemorizzare = [];
 
-while (numeriDaIndovinare.length < 5) {
+while (numeriDaMemorizzare.length < 5) {
     let numero = Math.floor(Math.random() * 100);
-    if (!numeriDaIndovinare.includes(numero)) { 
-        numeriDaIndovinare.push(numero); 
+    if (!numeriDaMemorizzare.includes(numero)) { 
+        numeriDaMemorizzare.push(numero); 
     }
 }
 
-  document.querySelector("header").innerHTML = `<div>${numeriDaIndovinare}</div>`;
+document.querySelector("header").innerHTML = `<div>${numeriDaMemorizzare}</div>`;
 
-//   Sabato si continua
+// Creare il timer che aggiunge display none
+
+let seconds = 5
+
+let messaggio = "Numeri scomparsi, riscrivili!"
+
+setTimeout(function() {
+  document.querySelector("header").classList.add("displaynone");
+
+},seconds * 1000);
+
+console.log(setTimeout)
 
