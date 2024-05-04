@@ -6,6 +6,7 @@ while (numeriDaMemorizzare.length < 5) {
         numeriDaMemorizzare.push(numero); 
     }
 }
+console.log(numeriDaMemorizzare);
 
 document.querySelector("header").innerHTML = `<div>${numeriDaMemorizzare}</div>`;
 
@@ -29,7 +30,13 @@ setTimeout(function() {
     for (let i = 0; i < 5; i++) {
       let elemento = prompt("Inserisci i numeri in ordine");
       numeriUtente.push(parseInt(elemento));
-    }}, seconds * 1500);
+    }
+    if (numeriDaMemorizzare.toString() === numeriUtente.toString()) {
+      alert("Bravo, hai vinto!");
+    } else {
+      alert("Sbagliato.");
+    }
+  }, seconds * 1500);
 
     console.log(numeriUtente);
 
